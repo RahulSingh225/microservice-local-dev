@@ -30,10 +30,10 @@ services:
     restart: on-failure
 
   service3:
-    hostname: microservice3
+    hostname: service3
     image: service3
     build:
-      context: service3
+      context: microservice3
       dockerfile: Dockerfile
     container_name: service3-container
     ports:
