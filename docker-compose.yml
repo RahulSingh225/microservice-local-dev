@@ -5,7 +5,7 @@ services:
     hostname: service1
     image: service1
     build:
-      context: service1
+      context: microservice1
       dockerfile: Dockerfile
     container_name: service1-container
     ports:
@@ -19,7 +19,7 @@ services:
     hostname: service2
     image: service2
     build:
-      context: service2
+      context: microservice2
       dockerfile: Dockerfile
     container_name: service2-container
     ports:
@@ -30,7 +30,7 @@ services:
     restart: on-failure
 
   service3:
-    hostname: service3
+    hostname: microservice3
     image: service3
     build:
       context: service3
