@@ -1,0 +1,56 @@
+version: "3.3"
+
+services:
+  service1:
+    hostname: service1
+    image: service1
+    build:
+      context: service1
+      dockerfile: Dockerfile
+    container_name: service1-container
+    ports:
+      - "5001:5001"
+      - "5123:5001"
+      - "5124:5001"
+      - "5125:5001"
+    restart: on-failure
+
+  service2:
+    hostname: service2
+    image: service2
+    build:
+      context: service2
+      dockerfile: Dockerfile
+    container_name: service2-container
+    ports:
+      - "5002:5002"
+      - "5126:5002"
+      - "5127:5002"
+      - "5128:5002"
+    restart: on-failure
+
+  service3:
+    hostname: service3
+    image: service3
+    build:
+      context: service3
+      dockerfile: Dockerfile
+    container_name: service3-container
+    ports:
+      - "5003:5003"
+      - "5129:5003"
+      - "5130:5003"
+      - "5131:5003"
+    restart: on-failure
+
+  nginx:
+    image: nginx
+    build:
+      context: nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - service1
+      - service2
+      - service3

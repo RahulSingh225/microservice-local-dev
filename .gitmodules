@@ -1,0 +1,12 @@
+[submodule "nginx"]
+	path = nginx
+	url = https://github.com/RahulSingh225/nginx.git
+[submodule "microservice1"]
+	path = microservice1
+	url = https://github.com/RahulSingh225/microservice1.git
+[submodule "microservice2"]
+	path = microservice2
+	url = https://github.com/RahulSingh225/microservice2.git
+[submodule "microservice3"]
+	path = microservice3
+	url = https://github.com/RahulSingh225/microservice3.git
